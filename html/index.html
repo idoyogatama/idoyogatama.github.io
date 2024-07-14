@@ -133,7 +133,21 @@
             <li><b>Age:</b> 24</li>
             <li><b>Gender:</b> Male</li>
           </ul>
-          <button class="btn btn-theme-outline">Download CV</button>
+          <button id="downloadButton" class="btn btn-theme-outline">Download CV</button>
+
+<script>
+document.getElementById('downloadButton').addEventListener('click', function() {
+    // Replace 'https://example.com/path/to/your/cv.pdf' with the actual URL of your PDF file
+    var pdfUrl = 'https://www.cakeresume.com/pdf/s--hgraPbAPl3-aiZ3l7aNAzg--/JY2bX.pdf';
+    var link = document.createElement('a');
+    link.href = pdfUrl;
+    link.setAttribute('download', 'cv.pdf');
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+</script>
         </div>
       </div>
     </div>
@@ -347,19 +361,19 @@
     <div class="container">
       <div class="row section-counter">
         <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
-          <h1 class="number" data-number="10">10</h1>
+          <h1 class="number" data-number="10">15</h1>
           <span>Clients</span>
         </div>
         <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
-          <h1 class="number" data-number="15">15</h1>
+          <h1 class="number" data-number="15">12</h1>
           <span>Project Compleate</span>
         </div>
         <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
-          <h1 class="number" data-number="4">4</h1>
+          <h1 class="number" data-number="4">2</h1>
           <span>Project Ongoing</span>
         </div>
         <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
-          <h1 class="number" data-number="18">18</h1>
+          <h1 class="number" data-number="18">5</h1>
           <span>Client Satisfaction</span>
         </div>
       </div>
